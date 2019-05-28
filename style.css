@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+.keys {
+	background-image: url('beatpad.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	justify-content: center;
+	/*flex-wrap: wrap;*/
+	align-items: center;
+}
+
+.key {
+	width: 7rem;
+	display: flex;
+	flex-direction: column;
+	background-color: lightgray;
+	margin: 1rem;
+	padding: .3rem 0;
+}
+
+kbd {
+	text-align: center;
+	margin-bottom: .3rem;
+}
+
+span {
+	text-align: center;
+	text-transform: uppercase;
+}
+

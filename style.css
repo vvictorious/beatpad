@@ -12,7 +12,7 @@
 	font-family: 'Roboto', sans-serif;
 	display: flex;
 	justify-content: center;
-	/*flex-wrap: wrap;*/
+
 	align-items: center;
 }
 
@@ -23,6 +23,7 @@
 	background-color: lightgray;
 	margin: 1rem;
 	padding: .3rem 0;
+	transition: .03s;
 }
 
 kbd {
@@ -35,3 +36,6 @@ span {
 	text-transform: uppercase;
 }
 
+.playing {
+	border: 1px solid yellow;
+}

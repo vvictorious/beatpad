@@ -3,24 +3,30 @@
 	padding: 0;
 }
 
-
-.keys {
+html {
 	background-image: url('beatpad.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;
-	font-family: 'Roboto', sans-serif;
-	display: flex;
-	justify-content: center;
+	font-family: 'Roboto', sans-serif;		
+}
 
+
+
+.keys {
+	display: flex;
+	flex: 1;
+	min-height: 100vh;
+	justify-content: center;
 	align-items: center;
 }
 
 .key {
 	width: 7rem;
+	height: 3rem;
 	display: flex;
 	flex-direction: column;
-	background-color: lightgray;
+	background-color: #ca4538;
 	margin: 1rem;
 	padding: .3rem 0;
 	transition: .09s;
@@ -37,5 +43,98 @@ span {
 }
 
 .playing {
-	border: 1px solid yellow;
+	background-color: #d42e1e;
+	-moz-box-shadow:    3px 3px 5px 6px #ccc;
+  	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  	box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+	.keys {
+		display: flex;
+		flex-wrap: wrap;
+		min-height: 0;
+		justify-content: center;
+		margin-top: 20%;
+	}
+
+	.key {
+		width: 170px;
+		height: 150px;
+		display: flex;
+		flex-direction: column;
+		background-color: #ca4538;
+		margin: 2rem;
+		padding: .3rem 0;
+		transition: .09s;
+
+	}
+
+	kbd {
+		margin-top: .8rem;
+		text-align: center;
+		margin-bottom: .3rem;
+		font-size: 3rem;
+	}
+
+	span {
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: .5rem;
+		font-size: 1.5rem;
+	}
+
+	.playing {
+		border: 1px solid red;
+	}	
+
+}
+
+@media screen and (max-width: 450px) {
+
+	html {
+		background-image: url('beatpad.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100vh;
+		background-position: bottom right;		
+	}	
+
+	.keys {
+		display: flex;
+		flex-wrap: wrap;
+		min-height: 0;
+		justify-content: center;
+		margin-top: 20%;
+	}
+
+	.key {
+		width: 200px;
+		height: 150px;
+		display: flex;
+		flex-direction: column;
+		background-color: #ca4538;
+		margin: 2rem;
+		padding: .3rem 0;
+		transition: .09s;
+
+	}
+
+	kbd {
+		text-align: center;
+		margin-bottom: .3rem;
+	}
+
+	span {
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.playing {
+		border: 1px solid red;
+	}	
+
 }

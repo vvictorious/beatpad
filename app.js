@@ -19,11 +19,15 @@ window.addEventListener('keydown', function(e){
 
 const keys =document.querySelectorAll('.key');
 
-keys.addEventListener('click', function(e){
-	const bass = document.getElementById('sound-1');
-	bass.currentTime = 0;
-	bass.play();
-})
+
+const bass = document.querySelector('.bass');
+bass.addEventListener('click', function(e){
+	const audio808 = document.querySelector('#sound-1');
+	if(!bass) return;
+	audio808.currentTime = 0;
+	audio808.play();
+	bass.classList.add('playing');
+});
 
 keys.forEach(key => key.addEventListener('transitionend', removeClass));
 
